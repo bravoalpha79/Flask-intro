@@ -3,7 +3,7 @@ import json
 from flask import Flask, render_template, request, flash
 
 app = Flask(__name__)
-app.secret_key="some_secret"
+app.secret_key = "some_secret"
 
 
 @app.route("/")
@@ -30,6 +30,7 @@ def about_member(member_name):
                 member = obj
 
     return render_template("member.html", member=member)
+
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
